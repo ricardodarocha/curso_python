@@ -11,6 +11,13 @@ source .venv/bin/activate
 pip install uv
 ```
 
+Outra forma de instalar o uv é usar o comando do powershell ou pwsh em algumas versões
+
+```
+powershell -Command "irm https://astral.sh/uv/install.ps1 | iex"
+pwsh -Command "irm https://astral.sh/uv/install.ps1 | iex"
+```
+
 Inicie um novo repositório com uv e  adicione as bibliotecas
 
 ```py
