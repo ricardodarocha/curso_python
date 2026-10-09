@@ -3,8 +3,11 @@
 ## Introdução ao Python para análise de dados
 
 Instale o uv por exemplo com pip
+Se ocorrer erro, por exemplo `externally-managed-environment` use um  ambiente virtual:
 
 ```py
+python3 -m venv .venv
+source .venv/bin/activate
 pip install uv
 ```
 
