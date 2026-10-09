@@ -13,7 +13,7 @@ pip install uv
 
 Outra forma de instalar o uv é usar o comando do powershell ou pwsh em algumas versões
 
-```
+```SHELL
 powershell -Command "irm https://astral.sh/uv/install.ps1 | iex"
 pwsh -Command "irm https://astral.sh/uv/install.ps1 | iex"
 ```
@@ -33,8 +33,6 @@ print(dados)
 
 
 <img width="321" height="77" alt="image" src="https://github.com/user-attachments/assets/47ffd900-5f38-4973-976c-c4755256432c" />
-
-
 
 abre o terminal e execute 
 
@@ -66,7 +64,7 @@ plt.show()
 
 Melhora a experiência de desenvolvimento permitindo interagir com o código python
 
-```py
+```SHELL
 uv add jupyter
 uv run jupyter notebook --port 8081
 
