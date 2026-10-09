@@ -62,32 +62,33 @@ plt.ylabel("Frequência")
 plt.show()
 ```
 
-dados["idade"].hist(bins=5)
+## Instalar e executar o jupyter notebooks
 
-dados: DataFrame com os dados lidos do CSV.
+Melhora a experiência de desenvolvimento permitindo interagir com o código python
 
-["idade"]: seleciona a coluna idade.
+```py
+uv add jupyter
+uv run jupyter notebook --port 8081
 
-.hist(): cria um histograma.
+REM quando o arquivo já existir, 
+uv run jupyter notebook <programa1.ipynb> --port 8081
+```
 
-bins=5: divide os valores em 5 intervalos (bins).
-
-Para personalizar o histograma:
-
+```py
 dados["idade"].hist(bins=5)
 plt.show()
 
-Importante: a coluna idade deve conter valores numéricos. Cada barra representa a frequência de valores em um intervalo de idades.
+idades.
 
 dados["idade"].hist(bins=5, cumulative=True)
 plt.show()
 
-O eixo Y mostrará a frequência acumulada: a quantidade de observações menores ou iguais ao limite superior de cada intervalo.
-
-Para mostrar a proporção acumulada entre 0 e 1:
+# O eixo Y mostrará a frequência acumulada: a quantidade de observações menores ou iguais ao limite superior de cada intervalo.
+# Para mostrar a proporção acumulada entre 0 e 1:
 
 dados["idade"].hist(bins=5, cumulative=True, density=True)
 plt.show()
+```
 
 ## Instalação de python no ubuntu
 
