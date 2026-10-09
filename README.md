@@ -78,3 +78,12 @@ Para mostrar a proporção acumulada entre 0 e 1:
 
 dados["idade"].hist(bins=5, cumulative=True, density=True)
 plt.show()
+
+## Instalação de python no ubuntu
+
+```py
+sudo apt update
+sudo apt upgrade -y
+
+sudo apt install -y python3 python3-pip python3-venv
+```
