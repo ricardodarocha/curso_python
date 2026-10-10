@@ -183,9 +183,7 @@ uv run jupyter notebook <programa1.ipynb> --port 8081
 
 ```py
 dados["idade"].hist(bins=5)
-plt.show()
-
-idades.
+plt.show() 
 
 dados["idade"].hist(bins=5, cumulative=True)
 plt.show()
