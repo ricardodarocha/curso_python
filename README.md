@@ -76,6 +76,99 @@ plt.ylabel("Frequência")
 plt.show()
 ```
 
+<img width="1687" height="1101" alt="image" src="https://github.com/user-attachments/assets/294e5f81-99bd-4123-863b-6da4d0402d7d" />
+
+#### Gráfico de barras
+Mostra a quantidade de alunos por idade.
+
+```py
+dados["idade"].value_counts().sort_index().plot(kind="bar")
+plt.xlabel("Idade")
+plt.ylabel("Alunos")
+plt.show()
+```
+<img width="426" height="351" alt="image" src="https://github.com/user-attachments/assets/c8aa98ab-e490-4260-9a0f-ee805985dcc1" />
+
+#### Boxplot
+
+Apresenta mediana, quartis e possíveis valores atípicos.
+
+```py
+dados.boxplot(column="idade")
+plt.ylabel("Idade")
+plt.show()
+```
+<img width="960" height="672" alt="image" src="https://github.com/user-attachments/assets/bb7df070-7465-4954-8e59-4bdee0e5e0b6" />
+
+## Outras dicas
+
+#### Estatística elementar
+```py
+# Média
+print("Média:", dados["idade"].mean())
+
+# Mediana
+print("Mediana:", dados["idade"].median())
+
+# Moda
+print("Moda:", dados["idade"].mode().tolist())
+
+# Maior valor
+print("Máximo:", dados["idade"].max())
+
+# Menor valor
+print("Mínimo:", dados["idade"].min())
+
+# Amplitude
+print("Amplitude:", dados["idade"].max() - dados["idade"].min())
+
+# Quantidade de alunos
+print("Quantidade:", dados["idade"].count())
+
+# Soma das idades
+print("Soma:", dados["idade"].sum())
+```
+
+#### Estatística descritiva
+```py
+# Estatísticas descritivas
+print(dados["idade"].describe())
+
+# Quantidade de alunos por idade
+print(dados["idade"].value_counts().sort_index())
+
+# Alunos com idade maior ou igual a 25 anos
+print(dados[dados["idade"] >= 25])
+
+# Ordenar alunos por idade
+print(dados.sort_values("idade"))
+
+# Aluno mais velho
+print(dados.loc[dados["idade"].idxmax()])
+
+# Aluno mais novo
+print(dados.loc[dados["idade"].idxmin()])
+```
+
+##  Resumo das funções
+
+Operação|Função pandas
+-|-
+Média	|`.mean()`
+Mediana|`.median()`
+Moda	|`.mode()`
+Máximo	|`.max()`
+Mínimo	|`.min()`
+Amplitude	|`.max() - .min()`
+Contagem	|`.count()`
+Soma	|`.sum()`
+Desvio padrão	|`.std()`
+Variância	|`.var()`
+Quartis	|`.quantile()`
+Estatísticas gerais	|`.describe()`
+
+Observação: count() conta valores não nulos, enquanto len(dados) conta o número de linhas do DataFrame.
+
 ## Instalar e executar o jupyter notebooks
 
 Melhora a experiência de desenvolvimento permitindo interagir com o código python
