@@ -21,11 +21,27 @@ pwsh -Command "irm https://astral.sh/uv/install.ps1 | iex"
 Inicie um novo repositório com uv e  adicione as bibliotecas
 
 ```py
+md projeto
+cd projeto/
+
 uv init
 uv add pandas numpy matplotlib
+```
 
+crie um novo arquivo main.py e adicione o código 
+crie um arquivo dados.csv com os dados abaixo
+
+```csv
+nome,idade
+jose,31
+maria,32
+```
+
+Veja o arquivo de exemplo na pasta dados/
+
+```py
 import pandas as pd
-dados = pd.read_csv("dados.csv")
+dados = pd.read_csv("dados/dados.csv")
 print(dados)
 
 
